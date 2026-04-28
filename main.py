@@ -65,8 +65,9 @@ def funding():
             })
 
     results = {}
-    # 使用 ThreadPoolExecutor 平行加速數據抓取
-    with ThreadPoolExecutor(max_workers=len(EXCHANGE_FETCHERS)) as executor:
+    # 使用 ThreadPoolExecutor 並限制最大執行緒，避免小型 Server (如 Render Free Plan) 記憶體溢出
+    # max_workers=2 足以處理您的抓取頻率
+    with ThreadPoolExecutor(max_workers=3) as executor:
         futures = {
             executor.submit(fetch_one, name, func, assets): name
             for name, func in EXCHANGE_FETCHERS.items()
@@ -111,4 +112,5 @@ def health():
 if __name__ == '__main__':
     # 改為 debug=False 避免在生產環境不必要的資源消耗
     # 確保 port 與 server.ts 中的代理目標 (8080) 一致
+    print("🚀 Python Funding API is starting on http://0.0.0.0:8080")
     app.run(host='0.0.0.0', port=8080, debug=False)

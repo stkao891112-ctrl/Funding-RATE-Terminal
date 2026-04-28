@@ -18,7 +18,7 @@ RUN pip3 install --break-system-packages -r requirements.txt
 # 複製所有檔案
 COPY . .
 
-# 建立前端 Production Build
+# 建立前端 Production Build (在此時保持開發依賴可用)
 RUN npm run build
 
 # 設定環境變數

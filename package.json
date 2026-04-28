@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -n \"PY,NODE\" -c \"blue,green\" \"python3 main.py\" \"tsx server.ts\"",
-    "start": "concurrently -n \"PY,NODE\" -c \"blue,green\" \"python3 main.py\" \"node --loader tsx server.ts\"",
+    "start": "concurrently --kill-others -n \"PY,NODE\" -c \"blue,green\" \"python3 main.py\" \"tsx server.ts\"",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
