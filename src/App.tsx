@@ -242,7 +242,7 @@ export default function App() {
           </div>
           <div className="flex flex-col">
             <h1 className="text-sm font-bold tracking-widest uppercase">
-              Funding Terminal
+              Funding Rate Terminal
             </h1>
             <div className="flex items-center gap-2">
                <div className={`w-1.5 h-1.5 rounded-full ${isFetching ? 'bg-yellow-500 animate-pulse' : 'bg-green-500'}`} />
@@ -440,7 +440,7 @@ export default function App() {
                             return (
                               <td key={ex} className="py-4 px-4 text-center">
                                 {rate ? (
-                                  <span className={`${isHero ? 'text-base sm:text-lg' : 'text-xs sm:text-sm'} font-mono font-bold ${rate.className}`}>{rate.text}</span>
+                                  <span className={`${isHero ? 'text-lg sm:text-xl' : 'text-xs sm:text-sm'} font-mono font-bold ${rate.className}`}>{rate.text}</span>
                                 ) : <span className="opacity-10">—</span>}
                               </td>
                             );
@@ -457,21 +457,21 @@ export default function App() {
                               <td key={ex} className="py-4 px-4">
                                 <div className="space-y-1.5 flex flex-col items-center">
                                   {usdt && (
-                                    <div className={`flex items-center justify-between ${isHero ? 'w-28 px-3 py-1' : 'w-24 px-2 py-0.5'} rounded bg-black/10 border border-white/[0.03]`}>
+                                    <div className={`flex items-center justify-between ${isHero ? 'w-32 px-3 py-1.5' : 'w-24 px-2 py-0.5'} rounded bg-black/10 border border-white/[0.03]`}>
                                       <span className="text-[8px] font-bold text-green-500/60 uppercase">USDT</span>
-                                      <span className={`${isHero ? 'text-xs sm:text-sm' : 'text-[9px] sm:text-[10px]'} font-mono font-bold ${usdt.className}`}>{usdt.text}</span>
+                                      <span className={`${isHero ? 'text-sm sm:text-base' : 'text-[9px] sm:text-[10px]'} font-mono font-bold ${usdt.className}`}>{usdt.text}</span>
                                     </div>
                                   )}
                                   {usdc && (
-                                    <div className={`flex items-center justify-between ${isHero ? 'w-24 sm:w-28 px-2 sm:px-3 py-1' : 'w-20 sm:w-24 px-1 sm:px-2 py-0.5'} rounded bg-black/10 border border-white/[0.03]`}>
+                                    <div className={`flex items-center justify-between ${isHero ? 'w-32 px-3 py-1.5' : 'w-24 sm:w-28 px-2 sm:px-3 py-1'} rounded bg-black/10 border border-white/[0.03]`}>
                                       <span className="text-[8px] font-bold text-blue-400/60 uppercase">USDC</span>
-                                      <span className={`${isHero ? 'text-xs sm:text-sm' : 'text-[9px] sm:text-[10px]'} font-mono font-bold ${usdc.className}`}>{usdc.text}</span>
+                                      <span className={`${isHero ? 'text-sm sm:text-base' : 'text-[9px] sm:text-[10px]'} font-mono font-bold ${usdc.className}`}>{usdc.text}</span>
                                     </div>
                                   )}
                                   {usd && (
-                                    <div className={`flex items-center justify-between ${isHero ? 'w-24 sm:w-28 px-2 sm:px-3 py-1' : 'w-20 sm:w-24 px-1 sm:px-2 py-0.5'} rounded bg-black/10 border border-white/[0.03]`}>
+                                    <div className={`flex items-center justify-between ${isHero ? 'w-32 px-3 py-1.5' : 'w-24 sm:w-28 px-2 sm:px-3 py-1'} rounded bg-black/10 border border-white/[0.03]`}>
                                       <span className="text-[8px] font-bold text-yellow-500/60 uppercase">COIN</span>
-                                      <span className={`${isHero ? 'text-xs sm:text-sm' : 'text-[9px] sm:text-[10px]'} font-mono font-bold ${usd.className}`}>{usd.text}</span>
+                                      <span className={`${isHero ? 'text-sm sm:text-base' : 'text-[9px] sm:text-[10px]'} font-mono font-bold ${usd.className}`}>{usd.text}</span>
                                     </div>
                                   )}
                                 </div>
@@ -484,7 +484,7 @@ export default function App() {
                           return (
                             <td key={ex} className="py-4 px-4 text-center">
                                {mainRate ? (
-                                <span className={`${isHero ? 'text-base sm:text-lg' : 'text-xs sm:text-sm'} font-mono font-bold ${mainRate.className}`}>{mainRate.text}</span>
+                                <span className={`${isHero ? 'text-lg sm:text-xl' : 'text-xs sm:text-sm'} font-mono font-bold ${mainRate.className}`}>{mainRate.text}</span>
                                ) : <span className="opacity-10">—</span>}
                             </td>
                           )

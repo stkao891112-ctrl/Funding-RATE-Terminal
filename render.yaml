@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: crypto-funding-monitor
+    runtime: docker
+    plan: free # 使用免費計畫
+    envVars:
+      - key: NODE_ENV
+        value: production

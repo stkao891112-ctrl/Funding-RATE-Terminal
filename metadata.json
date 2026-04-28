@@ -1,6 +1,6 @@
 {
-  "name": "Funding Terminal",
-  "description": "Multi-exchange crypto funding rate monitor with configurable refresh rates and professional data visualization.",
+  "name": "Funding Rate Terminal",
+  "description": "Professional multi-exchange crypto funding rate monitor with ultra-high precision tracking and historical projections.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

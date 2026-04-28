@@ -9,10 +9,8 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
 
-  // 如果使用者有設定遠端 Python API 的 URL，則透過代理轉發
-  // 這樣可以避免瀏覽器 CORS 問題
   const pythonApiUrl = process.env.PYTHON_API_URL || 'http://127.0.0.1:8080';
 
   console.log(`[Proxy] Target Python API: ${pythonApiUrl}`);
@@ -64,8 +62,8 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  app.listen(Number(PORT), '0.0.0.0', () => {
+    console.log(`Server running on http://localhost:${PORT} [${process.env.NODE_ENV || 'development'}]`);
   });
 }
 
